@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gì vậy nhỉ? Tài Gêm minh à.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="envelope" onclick="openLetter()">
+    <div class="flap"></div>
+    <div class="letter">
+      <p>Chúc chị em 10A1 ngủ ngon mơ đẹp nhé!! 😁😁</p>
+      <a href="https://vt.tiktok.com/ZSUw5N6Xf/" target="_blank" class="btn-link">🌸 Ấn zô đây đi 🌸</a>
+    </div>
+    <p class="label">📩 Lá thư</p>
+  </div>
+
+  <div class="watermark">LE ANH TUAN TAI</div>
+
+  <script>
+    function openLetter() {
+      const envelope = document.querySelector('.envelope');
+      envelope.classList.add('open');
+      createHearts();
+    }
+
+    // Hiệu ứng tim bay
+    function createHearts() {
+      for (let i = 0; i < 20; i++) {
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = 2 + Math.random() * 3 + 's';
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 5000);
+      }
+    }
+
+    // Sao nhấp nháy nền
+    for (let i = 0; i < 30; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.style.top = Math.random() * 100 + 'vh';
+      star.style.left = Math.random() * 100 + 'vw';
+      star.style.animationDelay = Math.random() * 3 + 's';
+      document.body.appendChild(star);
+    }
+  </script>
+
+</body>
+</html>
