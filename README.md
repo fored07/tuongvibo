@@ -1,2 +1,0 @@
-# tuongvibo
-Tuong Vi bò
